@@ -1,12 +1,11 @@
-import { useState } from 'react';
-
 import viteLogo from '/vite.svg';
 
 import './App.css';
 import reactLogo from './assets/react.svg';
+import { useCounterStore } from './store/counterStore';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { count, increment, decrement } = useCounterStore();
 
   return (
     <>
@@ -20,9 +19,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={increment}>count is {count}</button>
+        <button onClick={decrement}>Decrement</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
