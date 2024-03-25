@@ -21,7 +21,7 @@
     "src/**/*.{js,jsx,tsx,ts}": [
       "prettier --write src/**/*.{js,jsx,tsx,ts}",
       "eslint --fix",
-      "vitest run"
+      "vitest related --run"
     ],
     "*.{yaml,yml,md,json}": [
       "prettier --write *.{yaml,yml,md,json}"
