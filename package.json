@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "prettier --write ./src",
     "prepare": "husky install",
-    "test": "vitest"
+    "test": "vitest --run"
   },
   "husky": {
     "hooks": {
@@ -20,8 +20,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,tsx,ts}": [
       "prettier --write src/**/*.{js,jsx,tsx,ts}",
-      "eslint --fix",
-      "vitest related --run"
+      "eslint --fix"
     ],
     "*.{yaml,yml,md,json}": [
       "prettier --write *.{yaml,yml,md,json}"
